@@ -16,7 +16,9 @@ export default function Chat({ location }) {
     const [messages, setMessages] = useState([])
     const [message, setMessage] = useState('')
     const [users, setUsers] = useState('')
-    const ENDPOINT = 'localhost:5000'
+    // const ENDPOINT = 'localhost:5000'
+    const ENDPOINT = 'https://simple-chat-app-server.herokuapp.com/'
+    
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search)
@@ -52,7 +54,6 @@ export default function Chat({ location }) {
             socket.emit('sendMessage', message, () => setMessage(''))
         }
     }
-    console.log(messages)
 
     return (
         <div className="outerContainer">

@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Input.css'
 
 export default function Input({ message, setMessage, sendMessage }) {
-    const [messages, setMessages] = useState([])
-
     return (
         <form className="form">
             <input 
