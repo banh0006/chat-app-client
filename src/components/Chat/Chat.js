@@ -32,7 +32,7 @@ export default function Chat({ location }) {
         })
 
         return () => {
-            socket.emit('disconnect')
+            socket.emit('closeConnection')
             socket.off()
         }
     }, [ENDPOINT, location.search])
