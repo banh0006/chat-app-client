@@ -6,7 +6,7 @@ import Chat from './components/Chat/Chat'
 export default function App() {
 
     return (
-        <Router>
+        <Router basename="/chat-app-client">
             <Switch>
                 <Route path="/chat" component={Chat} />
                 <Route path="/" component={Join} />
